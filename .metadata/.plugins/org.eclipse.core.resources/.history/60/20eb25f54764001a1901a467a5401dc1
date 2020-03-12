@@ -1,0 +1,25 @@
+package user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UserDAO {
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	public UserDAO(){
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");//1.DB드라이버잡기
+			System.out.println("JoinCheck 드라이버잡기");
+			Connection conn = DriverManager.getConnection(
+					"jdbc:oracle:thin:@127.0.0.1:1521:xe", "jsptest", "1234");//2.커넥션객체생성해서 커넥트
+					System.out.println("조인체크 커넥트");
+			Statement stmt = conn.createStatement();//3.커넥트 객체로 stmt 객체를 만든다
+			System.out.println("statement");
+		} catch (Exception e) {
+			
+		}
+		
+	}
+}

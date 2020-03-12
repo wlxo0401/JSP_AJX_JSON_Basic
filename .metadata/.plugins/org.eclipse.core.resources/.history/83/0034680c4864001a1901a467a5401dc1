@@ -1,0 +1,23 @@
+package user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UserDAO {
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	public UserDAO(){
+		try {
+			String dbURL = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+			String dbID = "userInfo";
+			String dbPW = "1234";
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(dbURL, dbID, dbPW);
+		} catch (Exception e) {
+			
+		}
+		
+	}
+}
