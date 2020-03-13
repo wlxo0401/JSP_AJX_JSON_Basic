@@ -65,11 +65,11 @@
 					registerName.value ="";
 					registerAge.value = "";
 					registerEmail.value = "";
-					searchFunction();
+					searchFunction;
 				}
 			}
 		}
-		window.onload = searchFunction();
+		window.onload = searchFunction;
 	</script>
 </head>
 <body>
